@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -52,12 +52,16 @@
 
             <nav class="main-nav">
               <ul class="main-nav-list">
-                <li class="main-nav-link" href="#">Home</li>
-                <li class="main-nav-link" href="#about">About Me</li>
-                <li class="main-nav-link" href="#portfolio">Portfolio</li>
-                <li class="main-nav-link" href="#contact">Contact</li>
-                <li class="main-nav-link btn btn-primary" href="#resume">
-                  Resume
+                <li><a class="main-nav-link" href="#">Home</a></li>
+                <li><a class="main-nav-link" href="#about">About Me</a></li>
+                <li>
+                  <a class="main-nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li><a class="main-nav-link" href="#contact">Contact</a></li>
+                <li>
+                  <a class="main-nav-link btn btn-primary" href="#resume">
+                    Resume
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -72,12 +76,12 @@
             <a class="btn btn-secondary" href="#">Portfolio</a>
           </div>
           <div class="hero-img-box">
-            <img
+            <div
               class="hero-img"
-              src="img/ekaterina-and-son.jpg"
-              alt="picture of ekaterina furman with
-            her son"
-            />
+              role="img"
+              aria-label="picture of ekaterina furman with
+              her son"
+            ></div>
           </div>
         </div>
       </section>
