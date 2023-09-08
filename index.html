@@ -13,6 +13,15 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <title>Ekaterina Furman - Portfolio</title>
   </head>
   <body>
@@ -45,7 +54,7 @@
             <a href="#">
               <img
                 class="logo"
-                src="img/dragon-name-logo-white-svg.svg"
+                src="img/dragon-name-2-svg.svg"
                 alt="ekaterina furman luxscintilla dragon logo"
               />
             </a>
@@ -86,29 +95,107 @@
         </div>
       </section>
       <section class="section-about">
-        <div class="soft-skills">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos
-          architecto veritatis. Pariatur fuga assumenda reiciendis aut quaerat,
-          nesciunt placeat nostrum maiores omnis ipsam et magni laudantium
-          quibusdam numquam aspernatur tempora quae consequatur quo at velit
-          quod obcaecati! Provident voluptates vel tenetur error aspernatur
-          libero excepturi quibusdam temporibus illum sapiente.
-        </div>
-        <div class="about-me">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos
-          architecto veritatis. Pariatur fuga assumenda reiciendis aut quaerat,
-          nesciunt placeat nostrum maiores omnis ipsam et magni laudantium
-          quibusdam numquam aspernatur tempora quae consequatur quo at velit
-          quod obcaecati! Provident voluptates vel tenetur error aspernatur
-          libero excepturi quibusdam temporibus illum sapiente.
-        </div>
-        <div class="hard-skills">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos
-          architecto veritatis. Pariatur fuga assumenda reiciendis aut quaerat,
-          nesciunt placeat nostrum maiores omnis ipsam et magni laudantium
-          quibusdam numquam aspernatur tempora quae consequatur quo at velit
-          quod obcaecati! Provident voluptates vel tenetur error aspernatur
-          libero excepturi quibusdam temporibus illum sapiente.
+        <div class="container grid grid--3-cols">
+          <div class="skills hard-skills">
+            <ion-icon
+              class="skill-section-icon"
+              name="school-outline"
+            ></ion-icon>
+            <h2 class="heading-secondary">Hard Skills</h2>
+
+            <ul class="skill-list">
+              <li class="skill-item">
+                <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
+                <span>HTML</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
+                <span>CSS</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+                <span>JavaScript</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon class="skill-icon" name="logo-github"></ion-icon>
+                <span>GIT / GitHub</span>
+              </li>
+            </ul>
+          </div>
+          <div class="skills about-me">
+            <ion-icon
+              class="skill-section-icon"
+              name="finger-print-outline"
+            ></ion-icon>
+            <h2 class="heading-secondary">About Me</h2>
+
+            <p class="about-me-info">
+              Hello, I am Ekaterina Furman. Through life I have always dabbled
+              with HTML, CSS, and PhotoShop, as a hobby. About 2 years ago I
+              suddenly became a single mother.
+            </p>
+
+            <p class="about-me-info">
+              At that time I was recommended to pursue a career in Cyber
+              Security, so studied for a year getting my CompTIA A+, NET+, and
+              SEC+ certifications. However that path did not feel right.
+            </p>
+
+            <p class="about-me-info">
+              Which is when I discovered The Odin Project. I never thought you
+              could be self-taught in the web development industry, but The Odin
+              Project gave me that confidence to start. From there on I got a
+              few courses from Udemy from Jonas Schmedtmann and have been
+              dedicating all the free time left to my study, to become a Front
+              End Developer.
+            </p>
+          </div>
+          <div class="skills soft-skills">
+            <ion-icon
+              class="skill-section-icon"
+              name="people-outline"
+            ></ion-icon>
+            <h2 class="heading-secondary">Soft Skills</h2>
+
+            <ul class="skill-list">
+              <li class="skill-item">
+                <ion-icon class="skill-icon-sm" name="time-outline"></ion-icon>
+                <span>Time Management</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon
+                  class="skill-icon-sm"
+                  name="chatbubbles-outline"
+                ></ion-icon>
+                <span>Communication</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon
+                  class="skill-icon-sm"
+                  name="share-social-outline"
+                ></ion-icon>
+                <span>Teamwork</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon class="skill-icon-sm" name="bug-outline"></ion-icon>
+                <span>Problem Solving</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon
+                  class="skill-icon-sm"
+                  name="diamond-outline"
+                ></ion-icon>
+                <span>Customer Service</span>
+              </li>
+              <li class="skill-item">
+                <ion-icon
+                  class="skill-icon-sm"
+                  name="school-outline"
+                ></ion-icon>
+                <span>Self Learning</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

@@ -6,13 +6,16 @@
 
 :root {
   --main-text-clr: #444444;
-  --main-grey-bg-clr: #cccccc;
+
+  --dark-bg-clr: #020b10;
 
   --hero-text-clr: #ffffff;
 
   --accent-clr: #7fe9db;
-  --accent-hover: #51a398;
-  --accent-dark-text-clr: #0c1816;
+  --accent-lighter: #ccf6f1;
+  --accent-lightest: #f2fdfb;
+  --accent-dark: #40756e;
+  --accent-darkest: #192f2c;
 }
 
 html {
@@ -24,6 +27,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: var(--main-text-clr);
   overflow-x: hidden;
+  height: 100vh;
 }
 
 .container {
@@ -47,6 +51,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid--3-cols {
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+}
+
 /* GENERAL TYPOGRAPHY ---------------------------------------------------------- */
 
 .heading-primary {
@@ -56,13 +64,19 @@ body {
   line-height: 0.8;
 }
 
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4.8rem;
+}
+
 /* GENERAL ITEMS ---------------------------------------------------------- */
 
 .btn {
   display: inline-block;
   text-decoration: none;
   font-size: 1.8rem;
-  background-color: var(--main-grey-bg-clr);
   padding: 1.6rem 3.2rem;
   border-radius: 8px;
   color: inherit;
@@ -126,6 +140,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--hero-text-clr);
+  padding: 0 0 6.4rem 0;
+}
+
+.hero-text-box,
+.hero-img-box {
+  padding: 6.4rem 0 12.8rem 0;
+}
+
+.hero-img-box {
+  justify-self: center;
 }
 
 .hero-text-box {
@@ -152,25 +176,27 @@ body {
 .btn-primary:link,
 .btn-primary:visited {
   background-color: var(--accent-clr);
-  color: var(--accent-dark-text-clr);
+  color: var(--accent-darkest);
   transition: all 0.3s;
 }
 
 .btn-primary:hover,
 .btn-primary:active {
-  background-color: var(--accent-hover);
+  background-color: var(--accent-lighter);
 }
 
 .btn-secondary:link,
 .btn-secondary:visited {
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--main-grey-bg-clr);
+  box-shadow: inset 0 0 0 2px var(--accent-lighter);
   margin-left: 4.8rem;
+  transition: all 0.3s;
 }
 
-.hero-img-box {
-  justify-self: center;
-  padding: 6.4rem 0;
+.btn-secondary:hover,
+.btn-secondary:active {
+  box-shadow: inset 0 0 0 2px var(--accent-clr);
+  color: var(--accent-clr);
 }
 
 .hero-img {
@@ -210,4 +236,107 @@ body {
     transform: scale(1.03);
     opacity: 0;
   }
+}
+
+/* ABOUT & SKILLS ------------------------------------------------------- */
+
+.section-about {
+  background-color: var(--dark-bg-clr);
+  padding-bottom: 9.6rem;
+}
+
+.about-me {
+  margin-top: -9.6rem;
+}
+
+.skills {
+  background-image: linear-gradient(to bottom, #cccccc, #ffffff);
+  padding: 3.2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+.hard-skills,
+.soft-skills {
+  margin-top: 9.6rem;
+}
+
+.skills .heading-secondary {
+  text-align: center;
+}
+
+.skill-section-icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.hard-skills .skill-section-icon {
+  background-color: #d8ffb4;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.about-me .skill-section-icon {
+  background-color: #e9dbff;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.soft-skills .skill-section-icon {
+  background-color: #ffedcb;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.about-me-info {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+
+/* GENERAL SKILLS LIST ----------------------------------------------------- */
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.skill-item {
+  display: flex;
+  font-size: 1.8rem;
+}
+
+/* HARD SKILLS LIST -------------------------------------------------------- */
+
+.hard-skills .skill-list {
+  align-items: center;
+}
+
+.hard-skills .skill-item {
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon {
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+/* SOFT SKILLS LIST -------------------------------------------------------- */
+
+.soft-skills .skill-list {
+  align-items: flex-start;
+}
+
+.skill-icon-sm {
+  display: inline-block;
+  height: 2.4rem;
+  width: 2.4rem;
+  color: var(--accent-dark);
+  margin-right: 1.6rem;
 }
