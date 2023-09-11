@@ -7,7 +7,14 @@
 :root {
   --main-text-clr: #444444;
 
-  --dark-bg-clr: #020b10;
+  --light-text-clr: #bdd4d0;
+  --light-text-clr-secondary: #97aaa6;
+  --light-text-clr-tertiary: #849492;
+
+  --lightest-bg-clr: #efefef;
+  --light-bg-clr: #dcdcdc;
+
+  --dark-bg-clr: #0d1716;
 
   --hero-text-clr: #ffffff;
 
@@ -41,10 +48,15 @@ body {
 .grid {
   display: grid;
   column-gap: 6.4rem;
+  row-gap: 9.6rem;
 }
 
 .grid:last-child {
   margin-bottom: 0;
+}
+
+.grid-align-start {
+  align-items: start;
 }
 
 .grid--2-cols {
@@ -84,6 +96,11 @@ body {
 
 .margin-btm-sm {
   margin-bottom: 3.2rem;
+}
+
+a:link,
+a:visited {
+  color: var(--accent-dark);
 }
 
 /* HEADER ---------------------------------------------------------- */
@@ -140,7 +157,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--hero-text-clr);
-  padding: 0 0 6.4rem 0;
 }
 
 .hero-text-box,
@@ -153,6 +169,7 @@ body {
 }
 
 .hero-text-box {
+  position: relative;
   align-self: center;
 }
 
@@ -187,6 +204,7 @@ body {
 
 .btn-secondary:link,
 .btn-secondary:visited {
+  color: var(--accent-lighter);
   background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--accent-lighter);
   margin-left: 4.8rem;
@@ -198,6 +216,31 @@ body {
   box-shadow: inset 0 0 0 2px var(--accent-clr);
   color: var(--accent-clr);
 }
+
+/* SOCIALS ----------------------------------------------------- */
+
+.socials-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.socials-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.socials {
+  transition: all 0.3s;
+}
+
+.socials:hover {
+  color: var(--accent-clr);
+}
+
+/* HERO IMG ----------------------------------------------------- */
 
 .hero-img {
   background-image: url("/img/ekaterina-and-son.jpg");
@@ -241,24 +284,77 @@ body {
 /* ABOUT & SKILLS ------------------------------------------------------- */
 
 .section-about {
-  background-color: var(--dark-bg-clr);
-  padding-bottom: 9.6rem;
-}
-
-.about-me {
-  margin-top: -9.6rem;
+  background-color: var(--lightest-bg-clr);
+  padding: 9.6rem 0 9.6rem 0;
 }
 
 .skills {
-  background-image: linear-gradient(to bottom, #cccccc, #ffffff);
-  padding: 3.2rem;
+  position: relative;
+  background-color: var(--light-bg-clr);
+  padding: 9.6rem 3.2rem 3.2rem 3.2rem;
   border-radius: 8px;
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 12px 24px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hard-skills,
 .soft-skills {
   margin-top: 9.6rem;
+}
+
+.hard-skills {
+  padding-bottom: 6.4rem;
+}
+
+.hard-skills::before,
+.soft-skills::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: var(--dark-bg-clr);
+  width: 64rem;
+  height: 32rem;
+  transform: translate(-25%, -55%);
+  border-radius: 50%;
+}
+
+.hard-skills::after,
+.soft-skills::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-image: url("/img/spiral.svg");
+  width: 128rem;
+  height: 128rem;
+  transform: translate(-50%, 50%);
+  opacity: 0.05;
+}
+
+.about-me::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: var(--dark-bg-clr);
+  width: 64rem;
+  height: 32rem;
+  transform: translate(-20%, -55%);
+  border-radius: 50%;
+}
+
+.about-me::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-image: url("/img/geometric-flower.svg");
+  width: 96rem;
+  height: 96rem;
+  transform: translate(-25%, 20%);
+  opacity: 0.02;
 }
 
 .skills .heading-secondary {
@@ -271,22 +367,26 @@ body {
   margin-bottom: 1.6rem;
   height: 3.2rem;
   width: 3.2rem;
+  border: 6px solid var(--light-bg-clr);
 }
 
 .hard-skills .skill-section-icon {
-  background-color: #d8ffb4;
+  /* background-color: #d8ffb4; */
+  background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
 }
 
 .about-me .skill-section-icon {
-  background-color: #e9dbff;
+  /* background-color: #e9dbff; */
+  background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
 }
 
 .soft-skills .skill-section-icon {
-  background-color: #ffedcb;
+  /* background-color: #ffedcb; */
+  background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
 }
@@ -339,4 +439,30 @@ body {
   width: 2.4rem;
   color: var(--accent-dark);
   margin-right: 1.6rem;
+}
+
+/* PORTFOLIO ----------------------------------------------------- */
+
+.section-portfolio {
+  background-color: var(--dark-bg-clr);
+  padding: 9.6rem 0 9.6rem 0;
+  color: var(--light-text-clr);
+}
+
+.project-description {
+  font-size: 1.8rem;
+  color: var(--light-text-clr-secondary);
+  margin-bottom: 3.2rem;
+}
+
+.portfolio-text-box .skill-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--light-text-clr-tertiary);
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
