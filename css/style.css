@@ -83,6 +83,13 @@ body {
   margin-bottom: 4.8rem;
 }
 
+.heading-tertiary {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4.8rem;
+}
+
 /* GENERAL ITEMS ---------------------------------------------------------- */
 
 .btn {
@@ -103,6 +110,11 @@ a:visited {
   color: var(--accent-dark);
 }
 
+.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
 /* HEADER ---------------------------------------------------------- */
 
 .header {
@@ -121,7 +133,7 @@ a:visited {
 }
 
 .logo {
-  height: 3.2rem;
+  height: 6.4rem;
   width: auto;
   opacity: 0.6;
 }
@@ -329,8 +341,12 @@ a:visited {
   background-image: url("/img/spiral.svg");
   width: 128rem;
   height: 128rem;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 53%);
   opacity: 0.05;
+}
+
+.about-me {
+  position: relative;
 }
 
 .about-me::before {
@@ -355,6 +371,7 @@ a:visited {
   height: 96rem;
   transform: translate(-25%, 20%);
   opacity: 0.02;
+  z-index: 0;
 }
 
 .skills .heading-secondary {
@@ -371,30 +388,38 @@ a:visited {
 }
 
 .hard-skills .skill-section-icon {
+  position: relative;
   /* background-color: #d8ffb4; */
   background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .about-me .skill-section-icon {
+  position: relative;
   /* background-color: #e9dbff; */
   background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .soft-skills .skill-section-icon {
+  position: relative;
   /* background-color: #ffedcb; */
   background-color: var(--accent-lighter);
   padding: 1.6rem;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .about-me-info {
+  position: relative;
   font-size: 1.8rem;
   line-height: 1.5;
   margin-bottom: 2.4rem;
+  z-index: 1;
 }
 
 /* GENERAL SKILLS LIST ----------------------------------------------------- */
@@ -449,6 +474,11 @@ a:visited {
   color: var(--light-text-clr);
 }
 
+.project-link {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
 .project-description {
   font-size: 1.8rem;
   color: var(--light-text-clr-secondary);
@@ -465,4 +495,140 @@ a:visited {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* CONTACT ----------------------------------------------------- */
+
+.section-contact {
+  background-color: var(--lightest-bg-clr);
+  padding: 9.6rem 0 9.6rem 0;
+}
+
+.section-contact .heading-secondary {
+  text-align: center;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  position: relative;
+  background-color: var(--light-bg-clr);
+  padding: 3.2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 12px 24px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: var(--dark-bg-clr);
+  width: 192rem;
+  height: 32rem;
+  transform: translate(-21%, -75%);
+  border-radius: 50%;
+}
+
+.contact-icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+  height: 3.2rem;
+  width: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--accent-lighter);
+  border: 6px solid var(--light-bg-clr);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-label {
+  margin-bottom: 0.4rem;
+}
+
+.contact-form input {
+  margin-bottom: 2.4rem;
+  border: none;
+  height: 3.2rem;
+  padding-left: 0.8rem;
+}
+
+.contact-form textarea {
+  border: none;
+  padding-top: 0.4rem;
+  padding-left: 0.8rem;
+  height: 9.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.contact-submit {
+  align-self: center;
+  width: 30%;
+  border: none;
+  background-color: var(--accent-clr);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background-color: var(--accent-lighter);
+}
+
+/* FOOTER ----------------------------------------------------- */
+
+.footer {
+  background-color: var(--dark-bg-clr);
+  color: var(--light-text-clr);
+  padding: 9.6rem 0 3.2rem 0;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 6.4rem;
+  width: auto;
+  opacity: 0.6;
+}
+
+.copyright {
+  font-size: 1.6rem;
+}
+
+/* FOOTER NAV ----------------------------------------------------- */
+
+.footer-nav {
+  font-size: 1.8rem;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style-type: none;
+  color: var(--light-text-clr-tertiary);
+}
+
+.footer-nav .heading-tertiary {
+  color: var(--light-text-clr-secondary);
 }

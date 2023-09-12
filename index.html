@@ -54,7 +54,7 @@
             <a href="#">
               <img
                 class="logo"
-                src="img/dragon-name-2-svg.svg"
+                src="img/dragon-logo-white-svg.svg"
                 alt="ekaterina furman luxscintilla dragon logo"
               />
             </a>
@@ -173,9 +173,8 @@
                 target="_blank"
                 href="https://www.udemy.com/user/jonasschmedtmann/"
                 >Jonas Schmedtmann</a
-              >
-              and have been dedicating all the free time left to my study, to
-              become a Front End Developer.
+              >, among some others, and have been dedicating myself to become a
+              Front End Developer.
             </p>
           </div>
           <div class="skills soft-skills">
@@ -251,23 +250,37 @@
       <section class="section-portfolio">
         <div class="container grid grid--2-cols">
           <div class="portfolio-text-box">
-            <h2 class="heading-secondary">Project #1</h2>
+            <h2 class="heading-secondary">The Odin Project: To-do List</h2>
+            <p class="project-link">
+              GitHub Deployment:
+              <a
+                target="_blank"
+                href="https://luxscintilla.github.io/odin-todo/"
+                >To-do List</a
+              >
+            </p>
             <p class="project-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-              quos dolore quia architecto fugiat nisi laboriosam eius accusamus
-              esse quibusdam? Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Hic recusandae ab ducimus et deserunt in est
-              neque, reprehenderit quos aperiam.
+              Todo lists are a staple in beginning webdev tutorials because they
+              can be very simple. There is, however, a lot of room for
+              improvement and many features that can be added. This project gave
+              me a good taste of the many fundamentals in JavaScript, and the
+              areas I can improve upon for later projects. This has also been my
+              first contact with webpack.
             </p>
             <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
             <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
             <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+            <img
+              class="skill-icon grayscale"
+              src="img/js_webpack-icon.svg"
+              alt="webpack logo"
+            />
           </div>
 
           <div class="portfolio-img-box">
             <img
               class="portfolio-img"
-              src="img/img-placeholder.jpg"
+              src="img/todo-list.jpg"
               alt="image placeholder"
             />
           </div>
@@ -317,6 +330,97 @@
           </div>
         </div>
       </section>
+
+      <section class="section-contact">
+        <div class="container">
+          <h2 class="heading-secondary">Contact me</h2>
+
+          <div class="contact-box">
+            <ion-icon class="contact-icon" name="chatbox-outline"></ion-icon>
+            <form class="contact-form" name="contact-form" netlify>
+              <label class="contact-label" for="full-name">Full Name</label>
+              <input
+                id="full-name"
+                name="full-name"
+                type="text"
+                placeholder="John Smith"
+                required
+              />
+
+              <label class="contact-label" for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email@example.com"
+                required
+              />
+
+              <label class="contact-label" for="your-message">Message</label>
+              <textarea
+                class="message-box"
+                id="your-message"
+                name="your-message"
+                placeholder="Your message here..."
+                required
+              ></textarea>
+              <button class="btn contact-submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container grid-footer">
+          <div class="footer-links">
+            <nav class="footer-nav">
+              <h3 class="heading-tertiary">Sitemap</h3>
+              <ul class="footer-nav-list">
+                <li><a class="main-nav-link" href="#">Home</a></li>
+                <li><a class="main-nav-link" href="#about">About Me</a></li>
+                <li>
+                  <a class="main-nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li><a class="main-nav-link" href="#contact">Contact</a></li>
+                <li>
+                  <a class="main-nav-link" href="#resume"> Resume </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer-text">
+            <a href="#">
+              <img
+                class="footer-logo"
+                src="img/dragon-logo-white-svg.svg"
+                alt="ekaterina furman luxscintilla dragon logo"
+              />
+            </a>
+
+            <div class="footer-socials">
+              <a
+                class="socials"
+                target="_blank"
+                href="https://www.linkedin.com/in/ekaterina-furman/"
+                ><ion-icon class="socials-icon" name="logo-linkedin"></ion-icon
+              ></a>
+
+              <a
+                class="socials"
+                target="_blank"
+                href="https://github.com/LuxScintilla"
+                ><ion-icon class="socials-icon" name="logo-github"></ion-icon
+              ></a>
+            </div>
+
+            <p class="copyright">
+              All rights reserved &copy; <span class="year">2023</span>
+              <strong>Ekaterina Furman</strong>
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
