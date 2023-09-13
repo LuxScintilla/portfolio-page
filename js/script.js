@@ -6,12 +6,16 @@ const obs = new IntersectionObserver(
     if (entry.isIntersecting === false) {
       document.querySelector(".header").classList.add("sticky");
     }
+    if (entry.isIntersecting === true) {
+      document.querySelector(".header").classList.remove("sticky");
+    }
   },
   {
     //In the viewport
     root: null,
     // Event happens as soon as 0% of hero section is visible
     threshold: 0,
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionHeroEl);
