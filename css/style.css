@@ -23,6 +23,9 @@
   --accent-lightest: #f2fdfb;
   --accent-dark: #40756e;
   --accent-darkest: #192f2c;
+
+  --sky-light: #5b888b;
+  --sky-dark: #0f2c3a;
 }
 
 html {
@@ -33,7 +36,6 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   color: var(--main-text-clr);
-  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -138,6 +140,8 @@ a:visited {
   opacity: 0.6;
 }
 
+/* NAV ---------------------------------------------------------- */
+
 .main-nav {
   font-size: 1.8rem;
 }
@@ -161,6 +165,25 @@ a:visited {
   color: var(--accent-clr);
 }
 
+/* STICKY NAV ---------------------------------------------------------- */
+
+.sticky {
+  position: fixed;
+  background-color: var(--sky-dark);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 8rem;
+  padding: 0 3.2rem 0 3.2rem;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-hero {
+  padding-top: 11.5rem;
+}
+
 /* HERO ---------------------------------------------------------- */
 
 .section-hero {
@@ -173,7 +196,7 @@ a:visited {
 
 .hero-text-box,
 .hero-img-box {
-  padding: 6.4rem 0 12.8rem 0;
+  padding-bottom: 12.8rem;
 }
 
 .hero-img-box {
@@ -312,7 +335,7 @@ a:visited {
 
 .hard-skills,
 .soft-skills {
-  margin-top: 9.6rem;
+  margin-top: 4.8rem;
 }
 
 .hard-skills {
@@ -466,12 +489,192 @@ a:visited {
   margin-right: 1.6rem;
 }
 
+/* LEARNING ------------------------------------------------------- */
+
+.section-learning {
+  background-image: linear-gradient(
+    to bottom,
+    var(--sky-dark),
+    var(--sky-light)
+  );
+  padding: 9.6rem 0 9.6rem 0;
+}
+
+.section-learning .heading-secondary {
+  text-align: center;
+  color: var(--light-text-clr);
+  margin-bottom: 1.6rem;
+}
+
+.learning-sub-heading {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--light-text-clr-secondary);
+  margin-bottom: 3.2rem;
+}
+
+.grid-learning {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+
+.learning-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.learning-box:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.learning-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.6rem;
+}
+
+.learning-box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  color: var(--light-text-clr);
+  padding: 0 1.6rem 1.6rem 1.6rem;
+}
+
+.learning-title {
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.learning-description {
+  margin-bottom: 1.6rem;
+}
+
+/* PROGRESS ----------------------------------------------------- */
+
+.progress-bar {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.progress-bar.progress-odin {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 40%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-odin::before {
+  content: "40%";
+}
+
+.progress-bar.progress-jonas1 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 100%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-jonas1::before {
+  content: "100%";
+}
+
+.progress-bar.progress-jonas2 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-jonas2::before {
+  content: "0%";
+}
+
+.progress-bar.progress-jonas3 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 50%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-jonas3::before {
+  content: "50%";
+}
+
+.progress-bar.progress-jonas4 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-jonas4::before {
+  content: "0%";
+}
+
+.progress-bar.progress-jonas5 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-jonas5::before {
+  content: "0%";
+}
+
+.progress-bar.progress-colt {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-colt::before {
+  content: "0%";
+}
+
+.progress-bar.progress-maximilian {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-maximilian::before {
+  content: "0%";
+}
+
+.progress-bar.progress-viktor1 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-viktor1::before {
+  content: "0%";
+}
+
+.progress-bar.progress-viktor2 {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+}
+
+.progress-bar.progress-viktor2::before {
+  content: "0%";
+}
+
 /* PORTFOLIO ----------------------------------------------------- */
 
 .section-portfolio {
   background-color: var(--dark-bg-clr);
   padding: 9.6rem 0 9.6rem 0;
   color: var(--light-text-clr);
+}
+
+.project-date {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.project-link-box {
+  display: flex;
+  gap: 4.8rem;
 }
 
 .project-link {
@@ -482,7 +685,7 @@ a:visited {
 .project-description {
   font-size: 1.8rem;
   color: var(--light-text-clr-secondary);
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 .portfolio-text-box .skill-icon {
@@ -562,6 +765,8 @@ a:visited {
   border: none;
   height: 3.2rem;
   padding-left: 0.8rem;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form textarea {
@@ -570,6 +775,8 @@ a:visited {
   padding-left: 0.8rem;
   height: 9.6rem;
   margin-bottom: 3.2rem;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-submit {
@@ -577,6 +784,7 @@ a:visited {
   width: 30%;
   border: none;
   background-color: var(--accent-clr);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
   cursor: pointer;
 }

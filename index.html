@@ -22,35 +22,39 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <script defer src="js/script.js"></script>
+
     <title>Ekaterina Furman - Portfolio</title>
   </head>
   <body>
-    <!-- <header class="header">
-      <div class="container header-flex">
-        <a href="#">
-          <img
-            class="logo"
-            src="img/dragon-name-logo-svg.svg"
-            alt="ekaterina furman luxscintilla dragon logo"
-          />
-        </a>
+    <header class="header">
+      <a href="#">
+        <img
+          class="logo"
+          src="img/dragon-logo-white-svg.svg"
+          alt="ekaterina furman luxscintilla dragon logo"
+        />
+      </a>
 
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li class="main-nav-link" href="#">Home</li>
-            <li class="main-nav-link" href="#about">About Me</li>
-            <li class="main-nav-link" href="#portfolio">Portfolio</li>
-            <li class="main-nav-link" href="#contact">Contact</li>
-            <li class="main-nav-link btn btn-primary" href="#resume">Resume</li>
-          </ul>
-        </nav>
-      </div>
-    </header> -->
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Home</a></li>
+          <li><a class="main-nav-link" href="#about">About Me</a></li>
+          <li>
+            <a class="main-nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li><a class="main-nav-link" href="#contact">Contact</a></li>
+          <li>
+            <a class="main-nav-link btn btn-primary" href="#resume"> Resume </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <section class="section-hero">
         <div class="container grid grid--2-cols">
-          <header class="header">
+          <!-- <header class="header">
             <a href="#">
               <img
                 class="logo"
@@ -74,7 +78,7 @@
                 </li>
               </ul>
             </nav>
-          </header>
+          </header> -->
 
           <div class="hero-text-box">
             <h1 class="heading-primary hero-name-thin">Ekaterina</h1>
@@ -164,11 +168,7 @@
               Which is when I discovered
               <a target="_blank" href="https://www.theodinproject.com/"
                 >The Odin Project</a
-              >. I never thought you could be self-taught in the web development
-              industry, but The Odin Project gave me that confidence to start.
-            </p>
-            <p class="about-me-info">
-              From there on I got a few Udemy courses from
+              >. From there on I got a few Udemy courses from
               <a
                 target="_blank"
                 href="https://www.udemy.com/user/jonasschmedtmann/"
@@ -247,25 +247,320 @@
         </div>
       </section>
 
+      <section class="section-learning">
+        <div class="container">
+          <h2 class="heading-secondary">My Learning</h2>
+          <p class="learning-sub-heading">
+            This is the current roadmap in progress
+          </p>
+        </div>
+        <div class="container grid-learning">
+          <div class="learning-box">
+            <a target="_blank" href="https://www.theodinproject.com/">
+              <img
+                class="learning-img"
+                src="img/learning/the-odin-project.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">The Odin Project</p>
+              <p class="learning-description">
+                Your career in Web Development starts here
+              </p>
+
+              <div class="progress-bar progress-odin">
+                <progress
+                  value="40"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  40%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/jonas-html-css-basic.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Jonas Schmedtmann</p>
+              <p class="learning-description">
+                Build Responsive Websites with HTML and CSS
+              </p>
+
+              <div class="progress-bar progress-jonas1">
+                <progress
+                  value="100"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  100%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/advanced-css-and-sass/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/jonas-advanced-css-sass.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Jonas Schmedtmann</p>
+              <p class="learning-description">
+                Advanced CSS, Sass, Flexbox, Grid, Animations
+              </p>
+
+              <div class="progress-bar progress-jonas2">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/the-complete-javascript-course/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/jonas-javascript.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Jonas Schmedtmann</p>
+              <p class="learning-description">
+                The Complete JavaScript Course 2023
+              </p>
+
+              <div class="progress-bar progress-jonas3">
+                <progress
+                  value="50"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  50%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/the-ultimate-react-course/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/jonas-react-redux-tailwind.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Jonas Schmedtmann</p>
+              <p class="learning-description">
+                React Course 2023: React, Redux & More
+              </p>
+
+              <div class="progress-bar progress-jonas4">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/jonas-node-express-mongo.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Jonas Schmedtmann</p>
+              <p class="learning-description">
+                Course 2023: Node.js, Express, MongoDB
+              </p>
+
+              <div class="progress-bar progress-jonas5">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/git-and-github-bootcamp/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/colt-git-github.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Colt Steele</p>
+              <p class="learning-description">
+                The Complete Git & Github Bootcamp
+              </p>
+              <div class="progress-bar progress-colt">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/understanding-typescript/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/maximilian-typescript.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Maximilian Schwarzmüller</p>
+              <p class="learning-description">
+                Full Course: Understanding TypeScript
+              </p>
+              <div class="progress-bar progress-maximilian">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/webpack-from-beginner-to-advanced/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/viktor-webpack-basic.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Viktor Pyskunov</p>
+              <p class="learning-description">
+                Webpack 5: The Complete Guide For Beginners
+              </p>
+              <div class="progress-bar progress-viktor1">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+          <div class="learning-box">
+            <a
+              target="_blank"
+              href="https://www.udemy.com/course/webpack-optimizing-for-production/"
+            >
+              <img
+                class="learning-img"
+                src="img/learning/viktor-webpack-optimized.jpg"
+                alt="the odin project"
+            /></a>
+            <div class="learning-box-text">
+              <p class="learning-title">Viktor Pyskunov</p>
+              <p class="learning-description">
+                Webpack 5 in 2023: Optimizing For Production
+              </p>
+              <div class="progress-bar progress-viktor2">
+                <progress
+                  value="0"
+                  min="0"
+                  max="100"
+                  style="visibility: hidden; height: 0; width: 0"
+                >
+                  0%
+                </progress>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section-portfolio">
         <div class="container grid grid--2-cols">
           <div class="portfolio-text-box">
-            <h2 class="heading-secondary">The Odin Project: To-do List</h2>
-            <p class="project-link">
-              GitHub Deployment:
-              <a
-                target="_blank"
-                href="https://luxscintilla.github.io/odin-todo/"
-                >To-do List</a
-              >
-            </p>
+            <h2 class="heading-secondary">Odin Project: To-do List</h2>
+            <p class="project-date">24 June 2023</p>
+
+            <div class="project-link-box">
+              <div class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://luxscintilla.github.io/odin-todo/"
+                  >GitHub Deployment</a
+                >
+              </div>
+              <p class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://github.com/LuxScintilla/odin-todo"
+                  >GitHub Source Code</a
+                >
+              </p>
+            </div>
             <p class="project-description">
               Todo lists are a staple in beginning webdev tutorials because they
               can be very simple. There is, however, a lot of room for
               improvement and many features that can be added. This project gave
               me a good taste of the many fundamentals in JavaScript, and the
-              areas I can improve upon for later projects. This has also been my
-              first contact with webpack.
+              areas I can improve upon for later projects.
             </p>
             <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
             <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
@@ -288,33 +583,76 @@
           <div class="portfolio-img-box">
             <img
               class="portfolio-img"
-              src="img/img-placeholder.jpg"
+              src="img/restaurant-dom.jpg"
               alt="image placeholder"
             />
           </div>
 
           <div class="portfolio-text-box">
-            <h2 class="heading-secondary">Project #2</h2>
+            <h2 class="heading-secondary">Odin Project: Restaurant</h2>
+            <p class="project-date">02 June 2023</p>
+
+            <div class="project-link-box">
+              <div class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://luxscintilla.github.io/odin-restaurant/"
+                  >GitHub Deployment</a
+                >
+              </div>
+              <p class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://github.com/LuxScintilla/odin-restaurant"
+                  >GitHub Source Code</a
+                >
+              </p>
+            </div>
             <p class="project-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-              quos dolore quia architecto fugiat nisi laboriosam eius accusamus
-              esse quibusdam? Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Hic recusandae ab ducimus et deserunt in est
-              neque, reprehenderit quos aperiam.
+              DOM manipulation was the main focus for this project. The entire
+              page is constructed using only DOM manipulation with JavaScript.
+              Responsive design however has not been implemented in this
+              project. This has also been my first contact with webpack.
             </p>
             <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
             <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
             <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+            <img
+              class="skill-icon grayscale"
+              src="img/js_webpack-icon.svg"
+              alt="webpack logo"
+            />
           </div>
 
           <div class="portfolio-text-box">
-            <h2 class="heading-secondary">Project #3</h2>
+            <h2 class="heading-secondary">Odin Project: TicTacToe</h2>
+            <p class="project-date">15 May 2023</p>
+
+            <div class="project-link-box">
+              <div class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://luxscintilla.github.io/odin-tictactoe/"
+                  >GitHub Deployment</a
+                >
+              </div>
+              <p class="project-link">
+                <ion-icon name="open-outline"></ion-icon>
+                <a
+                  target="_blank"
+                  href="https://github.com/LuxScintilla/odin-tictactoe"
+                  >GitHub Source Code</a
+                >
+              </p>
+            </div>
             <p class="project-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-              quos dolore quia architecto fugiat nisi laboriosam eius accusamus
-              esse quibusdam? Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Hic recusandae ab ducimus et deserunt in est
-              neque, reprehenderit quos aperiam.
+              Factory functions, module patterns, local storage, and DOM
+              manipulation were the main focus for this project. This project
+              was a preparation for the OOP principles taught for the next
+              projects.
             </p>
             <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
             <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
@@ -324,7 +662,7 @@
           <div class="portfolio-img-box">
             <img
               class="portfolio-img"
-              src="img/img-placeholder.jpg"
+              src="img/tictactoe.jpg"
               alt="image placeholder"
             />
           </div>
