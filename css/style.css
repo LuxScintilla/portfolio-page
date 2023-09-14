@@ -7,22 +7,19 @@
 :root {
   --main-text-clr: #444444;
 
-  --light-text-clr: #bdd4d0;
-  --light-text-clr-secondary: #97aaa6;
-  --light-text-clr-tertiary: #849492;
+  --light-text-clr: #e6f6fa;
+  --light-text-clr-secondary: #ccedf5;
+  --light-text-clr-tertiary: #b3e5f0;
 
-  --lightest-bg-clr: #efefef;
-  --light-bg-clr: #dcdcdc;
+  --bg-lightest-clr: #efefef;
+  --bg-light-clr: #dcdcdc;
+  --bg-dark-clr: #002129;
 
-  --dark-bg-clr: #0d1716;
-
-  --hero-text-clr: #ffffff;
-
-  --accent-clr: #7fe9db;
-  --accent-lighter: #ccf6f1;
-  --accent-lightest: #f2fdfb;
-  --accent-dark: #40756e;
-  --accent-darkest: #192f2c;
+  --accent-clr-lightest: #99dceb;
+  --accent-clr-light: #4dc1db;
+  --accent-clr: #00a7cc;
+  --accent-clr-dark: #005466;
+  --accent-clr-darkest: #002129;
 
   --sky-light: #5b888b;
   --sky-dark: #0f2c3a;
@@ -112,7 +109,7 @@ body {
 
 a:link,
 a:visited {
-  color: var(--accent-dark);
+  color: var(--accent-clr-dark);
 }
 
 .grayscale {
@@ -169,14 +166,14 @@ a:visited {
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: var(--accent-clr);
+  color: var(--accent-clr-lightest);
 }
 
 /* STICKY NAV ---------------------------------------------------------- */
 
 .sticky {
   position: fixed;
-  background-color: var(--sky-dark);
+  background-color: var(--accent-clr-darkest);
   top: -80px;
   left: 0;
   width: 100%;
@@ -201,7 +198,7 @@ a:visited {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--hero-text-clr);
+  color: var(--light-text-clr);
 }
 
 .hero-text-box,
@@ -238,20 +235,20 @@ a:visited {
 .btn-primary:link,
 .btn-primary:visited {
   background-color: var(--accent-clr);
-  color: var(--accent-darkest);
+  color: var(--accent-clr-darkest);
   transition: all 0.3s;
 }
 
 .btn-primary:hover,
 .btn-primary:active {
-  background-color: var(--accent-lighter);
+  background-color: var(--accent-clr-lightest);
 }
 
 .btn-secondary:link,
 .btn-secondary:visited {
-  color: var(--accent-lighter);
+  color: var(--accent-clr-lightest);
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--accent-lighter);
+  box-shadow: inset 0 0 0 2px var(--accent-clr-lightest);
   margin-left: 4.8rem;
   transition: all 0.3s;
 }
@@ -277,12 +274,14 @@ a:visited {
   height: 2.4rem;
 }
 
-.socials {
+.socials:link,
+.socials:visited {
+  color: var(--accent-clr);
   transition: all 0.3s;
 }
 
 .socials:hover {
-  color: var(--accent-clr);
+  color: var(--accent-clr-lightest);
 }
 
 /* HERO IMG ----------------------------------------------------- */
@@ -329,13 +328,13 @@ a:visited {
 /* ABOUT & SKILLS ------------------------------------------------------- */
 
 .section-about {
-  background-color: var(--lightest-bg-clr);
+  background-color: var(--bg-lightest-clr);
   padding: 9.6rem 0 9.6rem 0;
 }
 
 .skills {
   position: relative;
-  background-color: var(--light-bg-clr);
+  background-color: var(--bg-light-clr);
   padding: 9.6rem 3.2rem 3.2rem 3.2rem;
   border-radius: 8px;
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
@@ -358,7 +357,7 @@ a:visited {
   content: "";
   top: 0;
   left: 0;
-  background-color: var(--dark-bg-clr);
+  background-color: var(--bg-dark-clr);
   width: 64rem;
   height: 32rem;
   transform: translate(-25%, -55%);
@@ -387,7 +386,7 @@ a:visited {
   content: "";
   top: 0;
   left: 0;
-  background-color: var(--dark-bg-clr);
+  background-color: var(--bg-dark-clr);
   width: 64rem;
   height: 32rem;
   transform: translate(-20%, -55%);
@@ -403,7 +402,7 @@ a:visited {
   width: 96rem;
   height: 96rem;
   transform: translate(-25%, 20%);
-  opacity: 0.02;
+  opacity: 0.04;
   z-index: 0;
 }
 
@@ -417,13 +416,12 @@ a:visited {
   margin-bottom: 1.6rem;
   height: 3.2rem;
   width: 3.2rem;
-  border: 6px solid var(--light-bg-clr);
+  border: 6px solid var(--bg-light-clr);
 }
 
 .hard-skills .skill-section-icon {
   position: relative;
-  /* background-color: #d8ffb4; */
-  background-color: var(--accent-lighter);
+  background-color: var(--accent-clr-lightest);
   padding: 1.6rem;
   border-radius: 50%;
   z-index: 1;
@@ -431,8 +429,7 @@ a:visited {
 
 .about-me .skill-section-icon {
   position: relative;
-  /* background-color: #e9dbff; */
-  background-color: var(--accent-lighter);
+  background-color: var(--accent-clr-lightest);
   padding: 1.6rem;
   border-radius: 50%;
   z-index: 1;
@@ -440,8 +437,7 @@ a:visited {
 
 .soft-skills .skill-section-icon {
   position: relative;
-  /* background-color: #ffedcb; */
-  background-color: var(--accent-lighter);
+  background-color: var(--accent-clr-lightest);
   padding: 1.6rem;
   border-radius: 50%;
   z-index: 1;
@@ -495,7 +491,7 @@ a:visited {
   display: inline-block;
   height: 2.4rem;
   width: 2.4rem;
-  color: var(--accent-dark);
+  color: var(--accent-clr-dark);
   margin-right: 1.6rem;
 }
 
@@ -530,7 +526,7 @@ a:visited {
 }
 
 .learning-box {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   opacity: 0.5;
   filter: grayscale(100%);
@@ -580,8 +576,12 @@ a:visited {
 }
 
 .progress-bar.progress-odin {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 40%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 40%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-odin::before {
@@ -589,8 +589,12 @@ a:visited {
 }
 
 .progress-bar.progress-jonas1 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 100%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 100%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-jonas1::before {
@@ -598,8 +602,12 @@ a:visited {
 }
 
 .progress-bar.progress-jonas2 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-jonas2::before {
@@ -607,8 +615,12 @@ a:visited {
 }
 
 .progress-bar.progress-jonas3 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 50%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 50%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-jonas3::before {
@@ -616,8 +628,12 @@ a:visited {
 }
 
 .progress-bar.progress-jonas4 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-jonas4::before {
@@ -625,8 +641,12 @@ a:visited {
 }
 
 .progress-bar.progress-jonas5 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-jonas5::before {
@@ -634,8 +654,12 @@ a:visited {
 }
 
 .progress-bar.progress-colt {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-colt::before {
@@ -643,8 +667,12 @@ a:visited {
 }
 
 .progress-bar.progress-maximilian {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-maximilian::before {
@@ -652,8 +680,12 @@ a:visited {
 }
 
 .progress-bar.progress-viktor1 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-viktor1::before {
@@ -661,8 +693,12 @@ a:visited {
 }
 
 .progress-bar.progress-viktor2 {
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(var(--accent-clr) 0%, var(--accent-lighter) 0);
+  background: radial-gradient(
+      closest-side,
+      var(--accent-clr-dark) 79%,
+      transparent 80% 100%
+    ),
+    conic-gradient(var(--accent-clr) 0%, var(--accent-clr-lightest) 0);
 }
 
 .progress-bar.progress-viktor2::before {
@@ -672,7 +708,7 @@ a:visited {
 /* PORTFOLIO ----------------------------------------------------- */
 
 .section-portfolio {
-  background-color: var(--dark-bg-clr);
+  background-color: var(--bg-dark-clr);
   padding: 9.6rem 0 9.6rem 0;
   color: var(--light-text-clr);
 }
@@ -690,6 +726,10 @@ a:visited {
 .project-link {
   font-size: 1.8rem;
   margin-bottom: 1.6rem;
+}
+
+.project-link a {
+  color: var(--accent-clr-light);
 }
 
 .project-description {
@@ -713,7 +753,7 @@ a:visited {
 /* CONTACT ----------------------------------------------------- */
 
 .section-contact {
-  background-color: var(--lightest-bg-clr);
+  background-color: var(--bg-lightest-clr);
   padding: 9.6rem 0 9.6rem 0;
 }
 
@@ -728,7 +768,7 @@ a:visited {
   align-items: center;
   font-size: 1.8rem;
   position: relative;
-  background-color: var(--light-bg-clr);
+  background-color: var(--bg-light-clr);
   padding: 3.2rem;
   border-radius: 8px;
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
@@ -741,7 +781,7 @@ a:visited {
   content: "";
   top: 0;
   left: 0;
-  background-color: var(--dark-bg-clr);
+  background-color: var(--bg-dark-clr);
   width: 192rem;
   height: 32rem;
   transform: translate(-21%, -75%);
@@ -756,8 +796,8 @@ a:visited {
   width: 3.2rem;
   padding: 1.6rem;
   border-radius: 50%;
-  background-color: var(--accent-lighter);
-  border: 6px solid var(--light-bg-clr);
+  background-color: var(--accent-clr-lightest);
+  border: 6px solid var(--bg-light-clr);
 }
 
 .contact-form {
@@ -800,13 +840,14 @@ a:visited {
 }
 
 .contact-submit:hover {
-  background-color: var(--accent-lighter);
+  background-color: var(--accent-clr-lightest);
 }
 
 /* FOOTER ----------------------------------------------------- */
 
 .footer {
-  background-color: var(--dark-bg-clr);
+  background-image: url(/img/subtle-prism.svg);
+  background-repeat: repeat;
   color: var(--light-text-clr);
   padding: 9.6rem 0 3.2rem 0;
 }
