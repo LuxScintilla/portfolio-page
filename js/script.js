@@ -19,3 +19,12 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+const mobileNavBtn = document.querySelectorAll(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+mobileNavBtn.forEach(
+  addEventListener("click", function () {
+    headerEl.classList.toggle("nav-open");
+  })
+);
