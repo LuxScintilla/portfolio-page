@@ -125,7 +125,6 @@ a:visited {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 2.4rem 0 2.4rem 0;
 
@@ -133,13 +132,7 @@ a:visited {
 }
 
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-}
-
-.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -198,6 +191,26 @@ a:visited {
   padding-top: 11.5rem;
 }
 
+/* MOBILE NAV ---------------------------------------------------------- */
+
+.btn-mobile-nav {
+  display: none;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: var(--light-text-clr);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* HERO ---------------------------------------------------------- */
 
 .section-hero {
@@ -220,27 +233,6 @@ a:visited {
 .hero-text-box {
   position: relative;
   align-self: center;
-}
-
-.hero-text-box::before {
-  position: absolute;
-  top: 6rem;
-  left: 32rem;
-  content: "";
-  background-image: url(/img/doodles/doodle-arrow.svg);
-  width: 16rem;
-  height: 16rem;
-  animation: arrow 3s ease-in-out infinite;
-}
-
-@keyframes arrow {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(2rem);
-  }
 }
 
 .hero-name-thin {
@@ -367,7 +359,8 @@ a:visited {
 /* ABOUT & SKILLS ------------------------------------------------------- */
 
 .section-about {
-  background-color: var(--bg-lightest-clr);
+  background-image: url(/img/subtle-prism-grey.svg);
+  background-repeat: repeat;
   padding: 9.6rem 0 9.6rem 0;
 }
 
@@ -376,7 +369,6 @@ a:visited {
   background-color: var(--bg-light-clr);
   padding: 9.6rem 3.2rem 3.2rem 3.2rem;
   border-radius: 8px;
-  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
   overflow: hidden;
   box-shadow: 0 12px 24px 4px rgba(0, 0, 0, 0.2);
 }
@@ -395,25 +387,12 @@ a:visited {
   position: absolute;
   content: "";
   top: 0;
-  left: 0;
+  left: 50%;
   background-color: var(--bg-dark-clr);
   width: 64rem;
   height: 32rem;
-  transform: translate(-25%, -55%);
+  transform: translate(-50%, -55%);
   border-radius: 50%;
-}
-
-.hard-skills::after,
-.soft-skills::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  background-image: url("/img/spiral.svg");
-  width: 128rem;
-  height: 128rem;
-  transform: translate(-50%, 53%);
-  opacity: 0.05;
 }
 
 .about-me {
@@ -424,11 +403,11 @@ a:visited {
   position: absolute;
   content: "";
   top: 0;
-  left: 0;
+  left: 50%;
   background-color: var(--bg-dark-clr);
   width: 64rem;
   height: 32rem;
-  transform: translate(-20%, -55%);
+  transform: translate(-50%, -55%);
   border-radius: 50%;
 }
 
@@ -631,8 +610,8 @@ a:visited {
   position: absolute;
   content: "";
   top: 0;
-  left: 0;
-  transform: translate(125%, 4rem);
+  left: 50%;
+  transform: translate(-50%, 4rem);
   background-image: url("/img/doodles/doodle-underline.svg");
   background-repeat: no-repeat;
   width: 32rem;
