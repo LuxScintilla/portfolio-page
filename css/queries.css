@@ -232,3 +232,15 @@
     width: 80%;
   }
 }
+
+@media (max-width: 25em) {
+  .contact-form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 18em) {
+  html {
+    font-size: 40%;
+  }
+}

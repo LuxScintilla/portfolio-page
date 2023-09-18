@@ -28,3 +28,7 @@ mobileNavBtn.forEach(
     headerEl.classList.toggle("nav-open");
   })
 );
+
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
