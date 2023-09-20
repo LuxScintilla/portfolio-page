@@ -94,13 +94,72 @@ body {
 
 /* GENERAL ITEMS ---------------------------------------------------------- */
 
-.btn {
+.btn:link,
+.btn:visited {
+  position: relative;
   display: inline-block;
   text-decoration: none;
   font-size: 1.8rem;
   padding: 1.6rem 3.2rem;
   border-radius: 8px;
-  color: inherit;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover::after {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.btn-primary {
+  background-color: var(--accent-clr);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-clr-lightest);
+}
+
+.btn-primary::after {
+  background-color: rgba(0, 167, 204, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--bg-dark-clr);
+}
+
+.btn-secondary:hover {
+  background-color: #003441;
+}
+
+.btn-secondary::after {
+  background-color: rgba(0, 33, 41, 0.5);
+}
+
+.btn-animated {
+  animation: moveToTop 0.8s ease-out 0.6s;
+  animation-fill-mode: backwards;
 }
 
 .margin-btm-sm {
@@ -115,6 +174,17 @@ a:visited {
 .grayscale {
   filter: grayscale(100%);
   opacity: 0.6;
+}
+
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 /* HEADER ---------------------------------------------------------- */
@@ -255,45 +325,6 @@ a:visited {
   animation: moveToTop 0.8s ease-out;
 }
 
-.btn-primary:link,
-.btn-primary:visited {
-  background-color: var(--accent-clr);
-  color: var(--accent-clr-darkest);
-  transition: all 0.3s;
-  animation: moveToTop 0.8s ease-out 0.6s;
-  animation-fill-mode: backwards;
-}
-
-.btn-primary:hover,
-.btn-primary:active {
-  background-color: var(--accent-clr-lightest);
-}
-
-.btn-secondary:link,
-.btn-secondary:visited {
-  color: var(--accent-clr-lightest);
-  background-color: rgba(0, 33, 41, 0.5);
-  box-shadow: inset 0 0 0 2px var(--accent-clr-lightest);
-  transition: all 0.3s;
-}
-
-.btn-secondary:hover,
-.btn-secondary:active {
-  box-shadow: inset 0 0 0 2px var(--accent-clr);
-  color: var(--accent-clr);
-}
-
-@keyframes moveToTop {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
 /* SOCIALS ----------------------------------------------------- */
 
 .socials-box {
@@ -361,13 +392,6 @@ a:visited {
   67% {
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
-  }
-}
-
-@keyframes fadeIn {
-  100% {
-    transform: scale(1.03);
-    opacity: 0;
   }
 }
 
@@ -703,16 +727,25 @@ a:visited {
 
 .contact-submit {
   align-self: center;
+  height: 4.8rem;
   width: 50%;
   border: none;
+  border-radius: 8px;
   background-color: var(--accent-clr);
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
   cursor: pointer;
 }
 
 .contact-submit:hover {
   background-color: var(--accent-clr-lightest);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact-submit:active {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* FOOTER ----------------------------------------------------- */
