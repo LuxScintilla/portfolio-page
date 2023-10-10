@@ -1,4 +1,4 @@
-![Header](./github-portfolio-banner.jpg)
+![Header](./github-portfoliopage-banner.jpg)
 
 # Portfolio Page
 
