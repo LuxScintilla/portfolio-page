@@ -92,7 +92,7 @@
           <ion-icon class="skill-section-icon" name="school-outline"></ion-icon>
           <h2 class="heading-secondary">Hard Skills</h2>
 
-          <ul class="skill-list">
+          <ul class="skill-list hard-skills-list">
             <li class="skill-item">
               <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
               <span>HTML</span>
@@ -102,8 +102,12 @@
               <span>CSS</span>
             </li>
             <li class="skill-item">
-              <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+              <ion-icon class="skill-icon" name="logo-javascript"></ion-icon>
               <span>JavaScript</span>
+            </li>
+            <li class="skill-item">
+              <ion-icon class="skill-icon" name="logo-sass"></ion-icon>
+              <span>Sass</span>
             </li>
             <li class="skill-item">
               <ion-icon class="skill-icon" name="logo-github"></ion-icon>
@@ -186,6 +190,43 @@
 
     <section class="section-portfolio" id="portfolio">
       <div class="container grid grid--2-cols">
+
+        <div class="portfolio-text-box">
+          <h2 class="heading-secondary">Personal: Calendar Planner</h2>
+          <p class="project-date">10 January 2024</p>
+
+          <div class="project-link-box">
+            <div class="project-link">
+              <ion-icon name="open-outline"></ion-icon>
+              <a target="_blank" href="https://calendar-planner-ef.netlify.app/">Netlify Deployment</a>
+            </div>
+            <p class="project-link">
+              <ion-icon name="open-outline"></ion-icon>
+              <a target="_blank" href="https://github.com/LuxScintilla/calendar-planner">GitHub Source Code</a>
+            </p>
+          </div>
+          <p class="project-description">
+            WIP! After finishing 3 courses on Udemy for HTML, CSS, Sass, and JavaScript, I decided it was time to build
+            a
+            bigger personal project.
+            This project combines creating a calendar from scratch, building on the to do list by being able to attach
+            tasks spread throughout the calendar, and
+            finally also utilizing a weather API that shows you the current weather information.
+          </p>
+          <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
+          <ion-icon class="skill-icon" name="logo-sass"></ion-icon>
+          <ion-icon class="skill-icon" name="logo-javascript"></ion-icon>
+          <img class="skill-icon grayscale" src="img/parcel.png" alt="parcel logo">
+        </div>
+
+        <div class="portfolio-img-box">
+          <img class="portfolio-img" src="img/calendar-planner.jpg" alt="calendar project screenshsot">
+        </div>
+
+        <div class="portfolio-img-box">
+          <img class="portfolio-img" src="img/todo-list.jpg" alt="to do list screenshot">
+        </div>
+
         <div class="portfolio-text-box">
           <h2 class="heading-secondary">Odin Project: To-do List</h2>
           <p class="project-date">24 June 2023</p>
@@ -209,16 +250,8 @@
           </p>
           <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
           <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
-          <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+          <ion-icon class="skill-icon" name="logo-javascript"></ion-icon>
           <img class="skill-icon grayscale" src="img/js_webpack-icon.svg" alt="webpack logo">
-        </div>
-
-        <div class="portfolio-img-box">
-          <img class="portfolio-img" src="img/todo-list.jpg" alt="to do list screenshot">
-        </div>
-
-        <div class="portfolio-img-box">
-          <img class="portfolio-img" src="img/restaurant-dom.jpg" alt="restaurant project screenshsot">
         </div>
 
         <div class="portfolio-text-box">
@@ -243,39 +276,17 @@
           </p>
           <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
           <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
-          <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
+          <ion-icon class="skill-icon" name="logo-javascript"></ion-icon>
           <img class="skill-icon grayscale" src="img/js_webpack-icon.svg" alt="webpack logo">
         </div>
 
-        <div class="portfolio-text-box">
-          <h2 class="heading-secondary">Odin Project: TicTacToe</h2>
-          <p class="project-date">15 May 2023</p>
-
-          <div class="project-link-box">
-            <div class="project-link">
-              <ion-icon name="open-outline"></ion-icon>
-              <a target="_blank" href="https://luxscintilla.github.io/odin-tictactoe/">GitHub Deployment</a>
-            </div>
-            <p class="project-link">
-              <ion-icon name="open-outline"></ion-icon>
-              <a target="_blank" href="https://github.com/LuxScintilla/odin-tictactoe">GitHub Source Code</a>
-            </p>
-          </div>
-          <p class="project-description">
-            Factory functions, module patterns, local storage, and DOM
-            manipulation were the main focus for this project. This project
-            was a preparation for the OOP principles taught for the next
-            projects.
-          </p>
-          <ion-icon class="skill-icon" name="logo-html5"></ion-icon>
-          <ion-icon class="skill-icon" name="logo-css3"></ion-icon>
-          <ion-icon class="skill-icon" name="logo-nodejs"></ion-icon>
-        </div>
-
         <div class="portfolio-img-box">
-          <img class="portfolio-img" src="img/tictactoe.jpg" alt="tic tac toe project screenshot">
+          <img class="portfolio-img" src="img/restaurant-dom.jpg" alt="restaurant project screenshsot">
         </div>
-      </div>
+
+
+
+
     </section>
 
     <section class="section-contact" id="contact">

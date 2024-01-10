@@ -419,6 +419,7 @@ a:visited {
 
 .hard-skills {
   padding-bottom: 6.4rem;
+  height: 90%;
 }
 
 .hard-skills::before,
@@ -514,6 +515,13 @@ a:visited {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  list-style: none;
+}
+
+.skill-list.hard-skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 3.2rem;
   list-style: none;
 }
 
