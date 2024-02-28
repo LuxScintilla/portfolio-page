@@ -49,3 +49,42 @@ mainNavLink.forEach((link) => {
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+// -------------- emailJS --------------
+
+const fullName = document.getElementById("full-name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("your-message");
+const contactButton = document.querySelector(".contact-submit");
+
+window.onload = function () {
+  document
+    .querySelector(".contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm("contact_service", "contact_form", this).then(
+        () => {
+          console.log("SUCCESS!");
+
+          fullName.textContent = "";
+          emailInput.textContent = "";
+          messageInput.textContent = "";
+          contactButton.textContent = "Message has been sent";
+
+          setTimeout(() => {
+            contactButton.textContent = "Submit";
+          }, 5000);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+
+          contactButton.textContent = error.message;
+
+          setTimeout(() => {
+            contactButton.textContent = "Submit";
+          }, 5000);
+        }
+      );
+    });
+};

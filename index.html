@@ -43,7 +43,7 @@
           </li>
           <li><a class="main-nav-link" href="#contact">Contact</a></li>
           <li>
-            <a class="main-nav-link btn btn-secondary" href="https://lux-portfolio-blog.netlify.app/">
+            <a class="main-nav-link btn btn-secondary" href="https://portfolio-blog-ef.netlify.app/">
               Blog
             </a>
           </li>
@@ -200,7 +200,7 @@
           <div class="project-link-box">
             <div class="project-link">
               <ion-icon name="open-outline"></ion-icon>
-              <a target="_blank" href="https://discover-cinema.netlify.app/#">Netlify Deployment</a>
+              <a target="_blank" href="https://discover-cinema-ef.netlify.app/#">Netlify Deployment</a>
             </div>
             <p class="project-link">
               <ion-icon name="open-outline"></ion-icon>
@@ -262,7 +262,7 @@
           <div class="project-link-box">
             <div class="project-link">
               <ion-icon name="open-outline"></ion-icon>
-              <a target="_blank" href="https://lux-portfolio-blog.netlify.app/">Netlify Deployment</a>
+              <a target="_blank" href="https://portfolio-blog-ef.netlify.app/">Netlify Deployment</a>
             </div>
             <p class="project-link">
               <ion-icon name="open-outline"></ion-icon>
@@ -289,7 +289,7 @@
 
         <div class="contact-box">
           <ion-icon class="contact-icon" name="chatbox-outline"></ion-icon>
-          <form class="contact-form" name="contact-form" netlify>
+          <form class="contact-form">
             <label class="contact-label" for="full-name">Full Name</label>
             <input id="full-name" name="full-name" type="text" placeholder="John Smith" required>
 
@@ -299,7 +299,7 @@
             <label class="contact-label" for="your-message">Message</label>
             <textarea class="message-box" id="your-message" name="your-message" placeholder="Your message here..."
               required></textarea>
-            <button class="contact-submit">Submit</button>
+            <button type="submit" class="contact-submit">Submit</button>
           </form>
         </div>
       </div>
@@ -347,6 +347,17 @@
       </div>
     </footer>
   </main>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "VTFB0xcHtlCdUqX07",
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
